@@ -41,3 +41,5 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 endif
+
+map <F2> :NERDTreeToggle<CR>
