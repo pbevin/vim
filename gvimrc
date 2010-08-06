@@ -11,3 +11,4 @@ map ZZ :w<Enter>
 
 colorscheme vividchalk
 
+map <D-t> :tabnew<CR>
