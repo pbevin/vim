@@ -33,6 +33,9 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.class set filetype=php
   autocmd BufNewFile,BufRead *.t set filetype=perl
 
+  " Remove trailing spaces on save
+  autocmd BufWritePre * :%s/\s\+$//e
+
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
@@ -43,3 +46,4 @@ if has("autocmd")
 endif
 
 map <F2> :NERDTreeToggle<CR>
+
