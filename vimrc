@@ -43,6 +43,8 @@ if has("autocmd")
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
+
+  au FocusLost * :wa
 endif
 
 map <F2> :NERDTreeToggle<CR>
