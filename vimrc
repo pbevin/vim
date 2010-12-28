@@ -13,6 +13,8 @@ set shiftwidth=2
 
 map <Leader>t :FuzzyFinderTextMate<Enter>
 
+call pathogen#runtime_append_all_bundles()
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
