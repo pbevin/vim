@@ -10,8 +10,12 @@ set autoindent
 set smartindent
 set tabstop=2
 set shiftwidth=2
+set autoread
 
 map <Leader>t :FuzzyFinderTextMate<Enter>
+
+" By default, this is 'lookup keyword', which I don't use except by accident.
+map K <nop>
 
 call pathogen#runtime_append_all_bundles()
 filetype off
@@ -47,7 +51,7 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 
-  au FocusLost * :wa
+  au FocusLost * silent! wa
 endif
 
 map <F2> :NERDTreeToggle<CR>
