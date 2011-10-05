@@ -5,6 +5,8 @@ if &background == "dark"
 endif
 set number
 
+set guifont=Menlo\ Regular:h12
+
 macmenu &File.New\ Tab key=<nop>
 
 map ZZ :w<Enter>
