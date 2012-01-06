@@ -17,11 +17,15 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 " By default, this is 'lookup keyword', which I don't use except by accident.
 map K <nop>
 
+" \r => sync with nerd tree
+map <leader>r :NERDTreeFind<cr>
+
 call pathogen#runtime_append_all_bundles()
 filetype off
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
+
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
