@@ -19,6 +19,7 @@ map K <nop>
 
 " \r => sync with nerd tree
 map <leader>r :NERDTreeFind<cr>
+map <Leader>aa :Align =><cr>
 
 call pathogen#runtime_append_all_bundles()
 filetype off
