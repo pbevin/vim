@@ -11,6 +11,9 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 set autoread
+set cursorline
+
+hi CursorLine term=bold cterm=bold guibg=Grey40
 
 map <Leader>t :FuzzyFinderTextMate<Enter>
 
