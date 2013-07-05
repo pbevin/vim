@@ -27,11 +27,23 @@ map <F1> <nop>
 map <leader>r :NERDTreeFind<cr>
 map <Leader>aa :Align =><cr>
 
+nnoremap <cr> :noh<CR><CR>:<backspace>
+
 call pathogen#runtime_append_all_bundles()
 filetype off
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
+
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
 
 
 " Only do this part when compiled with support for autocommands.
