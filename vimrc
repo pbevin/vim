@@ -29,7 +29,8 @@ map <Leader>aa :Align =><cr>
 
 nnoremap <cr> :noh<CR><CR>:<backspace>
 
-call pathogen#runtime_append_all_bundles()
+" call pathogen#incubate()
+execute pathogen#infect()
 filetype off
 
 " Don't use Ex mode, use Q for formatting
