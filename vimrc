@@ -28,6 +28,7 @@ map <leader>r :NERDTreeFind<cr>
 map <Leader>aa :Align =><cr>
 
 nnoremap <cr> :noh<CR><CR>:<backspace>
+nnoremap <F5> :e ~/.vimrc<CR>
 
 " call pathogen#incubate()
 execute pathogen#infect()
