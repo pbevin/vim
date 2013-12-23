@@ -64,6 +64,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.inc set filetype=php
   autocmd BufNewFile,BufRead *.class set filetype=php
   autocmd BufNewFile,BufRead *.t set filetype=perl
+  autocmd BufNewFile,BufRead *.rs set filetype=rust
 
   " Remove trailing spaces on save
   autocmd BufWritePre * :%s/\s\+$//e
