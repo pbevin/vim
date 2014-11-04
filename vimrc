@@ -58,6 +58,7 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+  autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
   autocmd BufNewFile,BufRead *.html set filetype=php
   autocmd BufNewFile,BufRead *.php set filetype=php
   autocmd BufNewFile,BufRead *.phtml set filetype=php
