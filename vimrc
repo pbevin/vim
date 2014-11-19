@@ -97,3 +97,9 @@ endfunction
 
 nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
 
+nmap <F1> :set invnumber<CR>
+
+hi normal guibg=black
+colorscheme vividchalk
+set cursorline
+hi CursorLine  guibg=#404040 ctermbg=235 cterm=none gui=none

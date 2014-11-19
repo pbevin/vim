@@ -5,7 +5,7 @@ if &background == "dark"
 endif
 set number
 
-set guifont=Menlo\ Regular:h12
+set guifont=Menlo\ Regular:h14
 
 macmenu &File.New\ Tab key=<nop>
 
