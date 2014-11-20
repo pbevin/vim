@@ -15,7 +15,7 @@ set cursorline
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
-map <Leader>t :FuzzyFinderTextMate<Enter>
+nmap <Leader>t :e ~/Dropbox/Things\ To\ Do.md<Enter>
 
 " By default, this is 'lookup keyword', which I don't use except by accident.
 map K <nop>
