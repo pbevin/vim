@@ -104,3 +104,16 @@ hi normal guibg=black
 colorscheme vividchalk
 set cursorline
 hi CursorLine  guibg=#404040 ctermbg=235 cterm=none gui=none
+
+function! HandleURI()
+  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ )">,;:]*')
+  echo s:uri
+  if s:uri != ""
+	  exec "!open \"" . s:uri . "\""
+  else
+	  echo "No URI found in line."
+  endif
+endfunction
+map <Leader>w :call HandleURI()<CR>
+
+" :so % to reload this file
