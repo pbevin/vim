@@ -14,3 +14,7 @@ map ZZ :w<Enter>
 colorscheme vividchalk
 
 map <D-t> :tabnew<CR>
+
+" I usually hit F1 by mistake meaning F2.
+map <F1> <nop>
+

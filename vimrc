@@ -20,9 +20,6 @@ nmap <Leader>t :e ~/Dropbox/Things\ To\ Do.md<Enter>
 " By default, this is 'lookup keyword', which I don't use except by accident.
 map K <nop>
 
-" I usually hit F1 by mistake meaning F2.
-map <F1> <nop>
-
 " \r => sync with nerd tree
 map <leader>r :NERDTreeFind<cr>
 map <Leader>aa :Align =><cr>
