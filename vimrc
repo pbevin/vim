@@ -12,6 +12,7 @@ set tabstop=2
 set shiftwidth=2
 set autoread
 set cursorline
+set relativenumber
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
