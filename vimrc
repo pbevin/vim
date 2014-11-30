@@ -1,3 +1,40 @@
+" Vundle setup:
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Bundle 'gmarik/Vundle.vim'
+Bundle 'tpope/vim-coffee-script'
+Bundle 'tpope/vim-commentary'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'jsx/jsx.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'sheerun/vim-polyglot'
+Bundle 'vividchalk.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Align'
+Bundle 'jlanzarotta/bufexplorer'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-surround'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'ekalinin/Dockerfile.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+
 syntax on
 
 set hlsearch
@@ -28,8 +65,6 @@ map <Leader>aa :Align =><cr>
 nnoremap <cr> :noh<CR><CR>:<backspace>
 nnoremap <F5> :e ~/.vimrc<CR>
 
-" call pathogen#incubate()
-execute pathogen#infect()
 filetype off
 
 " Don't use Ex mode, use Q for formatting
@@ -83,18 +118,18 @@ endif
 map <F2> :NERDTreeToggle<CR>
 
 
-function! ReloadSnippets( snippets_dir, ft )
-    if strlen( a:ft ) == 0
-        let filetype = "_"
-    else
-        let filetype = a:ft
-    endif
+" function! ReloadSnippets( snippets_dir, ft )
+"     if strlen( a:ft ) == 0
+"         let filetype = "_"
+"     else
+"         let filetype = a:ft
+"     endif
 
-    call ResetSnippets()
-    call GetSnippets( a:snippets_dir, filetype )
-endfunction
+"     call ResetSnippets()
+"     call GetSnippets( a:snippets_dir, filetype )
+" endfunction
 
-nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
+" nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
 
 nmap <F1> :set invnumber<CR>
 
