@@ -19,7 +19,7 @@ Bundle 'sheerun/vim-polyglot'
 Bundle 'vividchalk.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'Align'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'tpope/vim-rails'
@@ -52,6 +52,12 @@ set cursorline
 set relativenumber
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
+
+" let g:airline_powerline_fonts = 1
+" if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+" endif
+" let g:airline_symbols.space = "\ua0"
 
 nmap <Leader>t :e ~/Dropbox/Things\ To\ Do.md<Enter>
 
@@ -142,9 +148,9 @@ function! HandleURI()
   let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ )">,;:]*')
   echo s:uri
   if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
+    exec "!open \"" . s:uri . "\""
   else
-	  echo "No URI found in line."
+    echo "No URI found in line."
   endif
 endfunction
 map <Leader>w :call HandleURI()<CR>
