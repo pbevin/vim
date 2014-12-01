@@ -50,6 +50,7 @@ set shiftwidth=2
 set autoread
 set cursorline
 set relativenumber
+set laststatus=2 " always show status line
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
@@ -138,6 +139,7 @@ map <F2> :NERDTreeToggle<CR>
 " nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
 
 nmap <F1> :set invnumber<CR>
+nmap <F8> <C-w>o<C-w>v:A<CR>
 
 hi normal guibg=black
 colorscheme vividchalk
