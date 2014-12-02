@@ -29,6 +29,11 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Yggdroot/indentLine'
+Bundle 'ervandew/supertab'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-vinegar'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -154,5 +159,10 @@ function! HandleURI()
   endif
 endfunction
 map <Leader>w :call HandleURI()<CR>
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 " :so % to reload this file
