@@ -60,22 +60,23 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 " endif
 " let g:airline_symbols.space = "\ua0"
 
-nmap <Leader>t :e ~/Dropbox/Things\ To\ Do.md<Enter>
 
 " By default, this is 'lookup keyword', which I don't use except by accident.
 map K <nop>
+" Don't use Ex mode, use Q for formatting
+map Q gq
 
 " \r => sync with nerd tree
 map <leader>r :NERDTreeFind<cr>
-map <Leader>aa :Align =><cr>
 
 nnoremap <cr> :noh<CR><CR>:<backspace>
+nnoremap <F1> :set invnumber<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F4> :e ~/Dropbox/Things\ To\ Do.md<CR>
 nnoremap <F5> :e ~/.vimrc<CR>
+nnoremap <F8> <C-w>o<C-w>v:A<CR>
 
 filetype off
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
 
 function! PromoteToLet()
   :normal! dd
@@ -122,7 +123,6 @@ if has("autocmd")
   au FocusLost * silent! wa
 endif
 
-map <F2> :NERDTreeToggle<CR>
 
 
 " function! ReloadSnippets( snippets_dir, ft )
@@ -138,9 +138,6 @@ map <F2> :NERDTreeToggle<CR>
 
 " nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
 
-nmap <F1> :set invnumber<CR>
-nmap <F8> <C-w>o<C-w>v:A<CR>
-
 hi normal guibg=black
 colorscheme vividchalk
 set cursorline
@@ -151,6 +148,7 @@ function! HandleURI()
   echo s:uri
   if s:uri != ""
     exec "!open \"" . s:uri . "\""
+    redraw!
   else
     echo "No URI found in line."
   endif
