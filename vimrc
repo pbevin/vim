@@ -76,9 +76,10 @@ map <leader>r :NERDTreeFind<cr>
 
 nnoremap <cr> :noh<CR><CR>:<backspace>
 nnoremap <F1> :set invnumber<CR>
-nnoremap <F2> :NERDTreeToggle<CR>
+" nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F2> :e.<CR>
+nnoremap <F3> :e ~/.vimrc<CR>
 nnoremap <F4> :e ~/Dropbox/Things\ To\ Do.md<CR>
-nnoremap <F5> :e ~/.vimrc<CR>
 nnoremap <F8> <C-w>o<C-w>v:A<CR>
 
 filetype off
@@ -164,5 +165,14 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+let g:indentLine_char = '│'
+
+let NERDTreeHijackNetrw=0
+command E Explore
+
+" Disable ctrlp root-finding behaviour because it sucketh
+" mightily for hover
+let g:ctrlp_working_path_mode = '0'
 
 " :so % to reload this file
