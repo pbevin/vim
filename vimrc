@@ -24,13 +24,13 @@ Bundle 'Align'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-surround'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Yggdroot/indentLine'
 Bundle 'ervandew/supertab'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-vinegar'
@@ -54,7 +54,7 @@ set tabstop=2
 set shiftwidth=2
 set autoread
 set cursorline
-set relativenumber
+" set relativenumber
 set laststatus=2 " always show status line
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
@@ -166,13 +166,13 @@ nmap s <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-let g:indentLine_char = '│'
-
 let NERDTreeHijackNetrw=0
 command E Explore
 
 " Disable ctrlp root-finding behaviour because it sucketh
 " mightily for hover
 let g:ctrlp_working_path_mode = '0'
+set wildignore+=*/tmp/**
+
 
 " :so % to reload this file
