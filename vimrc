@@ -47,7 +47,6 @@ set incsearch
 set expandtab
 set ruler
 set showcmd
-set ignorecase
 set autoindent
 set smartindent
 set tabstop=2
@@ -56,6 +55,25 @@ set autoread
 set cursorline
 " set relativenumber
 set laststatus=2 " always show status line
+
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+nnoremap ' `
+nnoremap ` '
+let mapleader = " "
+set history=1000
+runtime macros/matchit.vim
+set wildmenu               " show available completions
+set wildmode=list:longest  " bash-like completion
+set ignorecase
+set smartcase
+set scrolloff=3 " give lines of context above/below cursor
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+set shortmess=atI
+
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
