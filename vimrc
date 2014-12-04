@@ -162,7 +162,7 @@ endfunction
 map <Leader>w :call HandleURI()<CR>
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap s <Plug>(easymotion-s2)
+nmap <Leader>s <Plug>(easymotion-s)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
