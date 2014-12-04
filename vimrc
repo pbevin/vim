@@ -76,8 +76,8 @@ map <leader>r :NERDTreeFind<cr>
 
 nnoremap <cr> :noh<CR><CR>:<backspace>
 nnoremap <F1> :set invnumber<CR>
-" nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F2> :e.<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+" nnoremap <F2> :e.<CR>
 nnoremap <F3> :e ~/.vimrc<CR>
 nnoremap <F4> :e ~/Dropbox/Things\ To\ Do.md<CR>
 nnoremap <F8> <C-w>o<C-w>v:A<CR>
@@ -166,7 +166,7 @@ nmap s <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-let NERDTreeHijackNetrw=0
+" let NERDTreeHijackNetrw=1
 command E Explore
 
 " Disable ctrlp root-finding behaviour because it sucketh
