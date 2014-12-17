@@ -190,7 +190,10 @@ command E Explore
 " Disable ctrlp root-finding behaviour because it sucketh
 " mightily for hover
 let g:ctrlp_working_path_mode = '0'
+" Reuse window in current tab, but not elsewhere
+let g:ctrlp_switch_buffer = 'et'
 set wildignore+=*/tmp/**
+set wildignore+=*/vendor/bundle/ruby/**
 
 
 " :so % to reload this file
