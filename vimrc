@@ -197,6 +197,9 @@ let g:ctrlp_switch_buffer = 'et'
 set wildignore+=*/tmp/**
 set wildignore+=*/vendor/bundle/ruby/**
 
+" omni complete C-x C-o
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 
 let g:xmpfilter_cmd = "seeing_is_believing"
