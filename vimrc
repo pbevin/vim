@@ -205,6 +205,8 @@ set wildignore+=*/vendor/bundle/ruby/**
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+nnoremap + ddp
+nnoremap - ddkP
 
 let g:xmpfilter_cmd = "seeing_is_believing"
 
