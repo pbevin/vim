@@ -99,6 +99,7 @@ nnoremap <F1> :set invnumber<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 " nnoremap <F2> :e.<CR>
 nnoremap <F3> :e ~/.vimrc<CR>
+nnoremap <S-F3> :so ~/.vimrc<CR>
 nnoremap <F4> :e ~/Dropbox/Things\ To\ Do.md<CR>
 nnoremap <F8> <C-w>o<C-w>v:A<CR>
 
