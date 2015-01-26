@@ -135,8 +135,12 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.rs set filetype=rust
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+
   " Remove trailing spaces on save
   autocmd BufWritePre * :%s/\s\+$//e
+
+  " http://calebthompson.io/crontab-and-vim-sitting-in-a-tree/
+  autocmd filetype crontab setlocal nobackup nowritebackup
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
