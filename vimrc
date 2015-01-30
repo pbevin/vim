@@ -62,7 +62,7 @@ set laststatus=2 " always show status line
 set hidden
 nnoremap ' `
 nnoremap ` '
-let mapleader = ","
+" let mapleader = ","
 set history=1000
 runtime macros/matchit.vim
 set wildmenu               " show available completions
