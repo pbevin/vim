@@ -127,15 +127,15 @@ if has("autocmd")
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
   autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
-  autocmd BufNewFile,BufRead *.html set filetype=php
-  autocmd BufNewFile,BufRead *.php set filetype=php
-  autocmd BufNewFile,BufRead *.phtml set filetype=php
-  autocmd BufNewFile,BufRead *.inc set filetype=php
-  autocmd BufNewFile,BufRead *.class set filetype=php
+  " autocmd BufNewFile,BufRead *.html set filetype=php
+  " autocmd BufNewFile,BufRead *.php set filetype=php
+  " autocmd BufNewFile,BufRead *.phtml set filetype=php
+  " autocmd BufNewFile,BufRead *.inc set filetype=php
+  " autocmd BufNewFile,BufRead *.class set filetype=php
   autocmd BufNewFile,BufRead *.t set filetype=perl
   autocmd BufNewFile,BufRead *.rs set filetype=rust
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
+  autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
   " Remove trailing spaces on save
   autocmd BufWritePre * :%s/\s\+$//e
