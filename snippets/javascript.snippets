@@ -2,3 +2,24 @@ snippet f
 	function(${1}) {
 		${0}
 	}
+
+# http://web-design-weekly.com/2015/01/29/opinionated-guide-react-js-best-practices-conventions/
+snippet cc
+	var ${1} = React.createClass({
+		propTypes: {},
+		mixins : [],
+
+		getInitialState: function() {},
+		getDefaultProps: function() {},
+
+		componentWillMount: function() {},
+		componentWillReceiveProps: function() {},
+		componentWillUnmount: function() {},
+
+		_parseData: function() {},
+		_onSelect: function() {},
+
+		render: function() {
+			${0}
+		}
+	});
