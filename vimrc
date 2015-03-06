@@ -190,6 +190,7 @@ let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_switch_buffer = 'et'
 set wildignore+=*/tmp/**
 set wildignore+=*/vendor/bundle/ruby/**
+set wildignore+=node_modules
 
 " omni complete C-x C-o
 filetype plugin on
