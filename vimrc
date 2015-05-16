@@ -202,8 +202,8 @@ set wildignore+=tmp
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
 set wildignore+=node_modules
-set wildignore+=test262
 set wildignore+=dist
+set wildignore+=test262
 
 " omni complete C-x C-o
 filetype plugin on
