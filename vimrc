@@ -34,7 +34,6 @@ Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-vinegar'
 Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'rizzatti/dash.vim'
 
@@ -94,6 +93,8 @@ map Q gq
 
 " \r => sync with nerd tree
 map <leader>r :NERDTreeFind<cr>
+
+inoremap <F1> <Nop>
 
 nnoremap <cr> :noh<CR><CR>:<backspace>
 nnoremap <F1> :set invnumber<CR>
@@ -202,6 +203,8 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
 set wildignore+=node_modules
+set wildignore+=test262
+set wildignore+=dist
 
 " omni complete C-x C-o
 filetype plugin on
@@ -209,8 +212,5 @@ set omnifunc=syntaxcomplete#Complete
 
 " I don't fold code, ever
 set foldlevel=99
-
-nnoremap + ddp
-nnoremap - ddkP
 
 " :so % to reload this file
