@@ -14,6 +14,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'pangloss/vim-javascript'
+" Bundle "othree/yajs.vim"
 Bundle 'mxw/vim-jsx'
 Bundle 'kien/ctrlp.vim'
 Bundle 'sheerun/vim-polyglot'
@@ -119,6 +120,8 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
 
+:command AA :e ~/Dropbox/aa.md
+
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -211,5 +214,7 @@ set omnifunc=syntaxcomplete#Complete
 
 " I don't fold code, ever
 set foldlevel=99
+
+
 
 " :so % to reload this file
