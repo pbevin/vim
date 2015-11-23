@@ -5,12 +5,18 @@ snippet f
 
 # http://web-design-weekly.com/2015/01/29/opinionated-guide-react-js-best-practices-conventions/
 snippet cc
-	var ${1} = React.createClass({
-		propTypes: {},
-		getDefaultProps: function() {},
-		mixins : [ PureRenderMixin ],
+	const ${1} = React.createClass({
+		propTypes: {
+			sendAction: React.PropTypes.func.isRequired
+		},
 
-		render: function() {
-			${0}
+		render() {
+		  const { sendAction } = this.props;
+
+			return (
+			  h("${2:div}", [
+				  ${0}
+				])
+			);
 		}
 	});
