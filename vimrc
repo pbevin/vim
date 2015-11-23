@@ -37,6 +37,7 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'rizzatti/dash.vim'
+Bundle 'lambdatoast/elm.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
